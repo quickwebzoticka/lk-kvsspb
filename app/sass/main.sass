@@ -6,6 +6,303 @@
 	padding: 0
 	margin: 0
 	box-sizing: border-box
+	&:focus
+		outline: none
+	&:visited
+		outline: none
+
+body, h1
+	font-family: 'Myriad Pro', sans-serif
 
 .wrapper
 	overflow: hidden
+
+.container
+	background: $backcolor
+
+.text-head
+	color: #000
+	font-size: 18px
+	font-weight: bold
+	font-family: 'Myriad Pro Bold', sans-serif
+
+.text-head_center
+	text-align: center
+
+.text-main
+	color: #70706f
+	font-size: 16px
+	font-weight: 400
+
+.text-descr
+	color: #b2b2b2
+	font-size: 11px
+	font-weight: 400
+
+.lk-block
+	padding: 50px 0
+	display: flex
+	align-items: stretch
+	justify-content: space-between
+
+.left-side, .center-side, .right-side
+	flex: 0 1 33%
+	padding: 0 15px
+
+.center-side
+	border-left: 2px dotted #DDD
+	border-right: 2px dotted #DDD
+
+.photo-wrapper
+	padding: 15px 0
+.photo-wrapper__img
+	width: 50%
+	border-radius: 50%
+	margin: 0 auto
+	position: relative
+
+.photo-wrapper__plus
+	width: 31px
+	height: 31px
+	position: absolute
+	bottom: 15px
+	right: 15px
+	cursor: pointer
+.tooltip
+	position: absolute
+	background: #FFF
+	opacity: 0
+	padding: 5px
+	border-radius: 5px
+	transform: translateY(50%)
+	transition: 0.5s ease-in-out
+	font-size: 9px
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		width: 10px
+		height: 10px
+		background: #FFF
+		top: 0
+		left: 10px
+		transform: translate(0,-50%) rotate(45deg)
+
+.photo-wrapper__plus:hover .tooltip
+	opacity: 1
+	transform: translateY(0%)
+
+.button-edit:hover .tooltip
+	opacity: 1
+	transform: translateY(0%)
+
+.left-side
+	.text-descr
+		width: 53%
+		margin: 0 auto 20px
+
+.name
+	margin: 0 auto
+	text-align: center
+	position: relative
+
+.wrapper_with-underline
+	border-bottom: 1px solid #000
+	display: inline-block
+
+.img-wrapper
+	padding: 15px 0
+
+.img-wrapper_small
+	width: 50%
+	margin: 0 auto
+
+.text-head_thin
+	font-weight: 100
+	font-family: 'Myriad pro bold', sans-serif
+
+.input__label
+	color: #b2b2b2
+	font-family: "Myriad Pro"
+	font-size: 14px
+	font-weight: 400
+	margin-bottom: 5px
+
+.SumoSelect
+	display: block
+	width: 100%
+	.CaptionCont
+		width: 100%
+		position: relative
+		z-index: 100
+		display: block
+		border: none
+		border-radius: 5px
+		box-shadow: 2px 2px 3px 1px #AAA
+		span
+			color: #333
+			font-family: "Myriad Pro"
+			font-size: 11px
+			font-weight: 400
+		&:hover
+			box-shadow: 2px 2px 3px 1px #AAA
+			border: none
+			outline: none
+		&:focus
+			box-shadow: 2px 2px 3px 1px #AAA
+			border: none
+			outline: none
+		&:visited
+			box-shadow: 2px 2px 3px 1px #AAA
+			border: none
+			outline: none
+		label
+			width: 100%
+			margin-bottom: 0px
+			i
+				margin: 3px 10px 0 auto
+				background: url(../img/arrow.png) center center no-repeat
+
+.SumoSelect.open, .SumoSelect:focus, .SumoSelect:hover
+	.CaptionCont
+		box-shadow: 2px 2px 3px 1px #AAA
+		border: none
+		outline: none
+
+.input
+	margin-bottom: 18px
+
+textarea
+	width: 100%
+	height: 60px
+	border: none
+	border-radius: 5px
+	box-shadow: 2px 2px 3px 1px #AAA
+	padding: 10px
+	resize: none
+
+.input-with-edit
+
+.input__field
+	display: flex
+	justify-content: space-between
+	align-items: center
+	input
+		flex: 1
+		margin: 0 20px
+		height: 30px
+		border: none
+		border-radius: 5px
+		padding: 10px
+		box-shadow: 2px 2px 3px 1px #AAA
+
+.input__logo
+	width: 34px
+
+.button-edit
+	width: 31px
+	border-radius: 50%
+	cursor: pointer
+
+.input__checkbox
+	padding: 5px 0
+	label
+		display: flex
+		align-items: center
+		.input__checkbox__square
+			width: 12px
+			height: 12px
+			border: 1px solid $regularcolor
+			margin-right: 9px
+			position: relative
+			&:after
+				content: ''
+				display: none
+				position: absolute
+				width: 12px
+				height: 5px
+				border-bottom: 1px solid $regularcolor
+				border-left: 1px solid $regularcolor
+				top: 20%
+				left: 70%
+				transform: translate(-50%, -50%) rotate(-45deg)
+		input[type="checkbox"]
+			display: none
+			&:checked ~ .input__checkbox__square:after
+				display: block
+
+.btn-wrapper
+	display: flex
+	align-items: center
+	justify-content: flex-end
+
+input[type="submit"]
+	background: linear-gradient( to left,$darkgradient, $lightgradient)
+	border: none
+	outline: none
+	width: 101px
+	height: 31px
+	border-radius: 30px
+	color: #ffffff
+	font-family: "Myriad Pro"
+	font-size: 11px
+	font-weight: 700
+
+.radio-choice__radio
+	margin: 15px 0
+
+.radio-choice__radio__circle
+	width: 13px
+	height: 13px
+	border-radius: 50%
+	margin-right: 10px
+	border: 1px solid $regularcolor
+	display: inline-block
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		display: none
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		background: $regularcolor
+		top: 50%
+		left: 50%
+		transform: translate( -55%, -45%)
+.radio-choice__radio__text
+	display: inline-block
+
+.radio-choice__radio__wrapper
+	display: flex
+	align-items: center
+
+input[type="radio"]
+	display: none
+	&:checked ~ .radio-choice__radio__circle:after
+		display: block
+
+.news
+	margin-bottom: 25px
+	text-decoration: underline
+
+.news__head
+	font-family: 'Myriad pro bold', sans-serif
+	font-weight: 700
+	color: #000
+
+.news__main
+	color: #70706f
+	text-decoration: underline
+
+.news__date
+	margin-top: 10px
+	color: #b2b2b2
+	text-decoration: underline
+
+.second-screen
+	border-top: 1px solid $regularcolor
+	border-bottom: 1px solid $regularcolor
+
+
+
