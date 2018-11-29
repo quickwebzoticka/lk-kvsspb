@@ -17,8 +17,181 @@ body, h1
 .wrapper
 	overflow: hidden
 
+.background-01,
+.background-02,
+.background-03,
+.background-04,
+.background-05,
+.background-06,
+.background-07,
+.background-08,
+.background-09
+	position: absolute
+
+@media screen and (max-width: 2559px)
+	.background-01
+		bottom: 15%
+		left: -28%
+
+	.background-02
+		bottom: 5%
+		left: -28%
+
+	.background-03
+		bottom: 5%
+		left: -40%
+
+	.background-09
+		bottom: 3.5%
+		left: -20%
+		img
+			transform: scale(0.7)
+
+	.background-04
+		bottom: 15%
+		right: -40%
+
+	.background-05
+		bottom: 15%
+		right: -20%
+
+	.background-06
+		bottom: 5%
+		right: -30%
+
+	.background-07
+		bottom: 5%
+		right: -40%
+
+	.background-08
+		bottom: 5%
+		right: -15%	
+
+@media screen and (max-width: 1920px)
+	.background-01
+		top: 8%
+		left: -20%
+
+	.background-02
+		top: 18%
+		left: -20%
+
+	.background-03
+		top: 48%
+		left: -20%
+
+	.background-09
+		top: 32%
+		left: -20%
+
+	.background-04
+		top: 8%
+		right: -20%
+
+	.background-05
+		top: 18%
+		right: -20%
+
+	.background-06
+		top: 28%
+		right: -20%
+
+	.background-07
+		top: 38%
+		right: -20%
+
+	.background-08
+		top: 48%
+		right: -20%
+
+
+@media screen and (max-width: 1366px)
+	.background-01
+		top: 8%
+		left: -20%
+
+	.background-02
+		top: 18%
+		left: -20%
+
+	.background-03
+		top: 38%
+		left: -20%
+
+	.background-04
+		top: 8%
+		right: -20%
+
+	.background-05
+		top: 18%
+		right: -20%
+
+	.background-06
+		top: 28%
+		right: -20%
+
+	.background-07
+		top: 38%
+		right: -20%
+
+	.background-08
+		top: 48%
+		right: -20%
+
+.header
+	background: #333
+	.container
+		background: transparent
+		padding: 0px
+	ul
+		margin-bottom: 0px
+		display: flex
+		align-items: stretch
+		li
+			display: flex
+			align-items: center
+			justify-content: center
+			border-right: 1px solid #FFF
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				height: 0px
+				background: $regularcolor
+				bottom: 0
+				left: 0
+				right: 0
+				transition: 0.3s ease-in-out
+			&:first-child
+				border-left: 1px solid #FFF
+			&:hover:before
+				height: 3px
+			a
+				text-transform: uppercase
+				display: block
+				color: #fff
+				font: 14px "Myriad pro", sans-serif
+				text-transform: uppercase
+				padding: 12px 15px 11px
+				text-decoration: none
+
+.count
+	position: absolute
+	top: 5px
+	right: 5px
+	background: $regularcolor
+	width: 20px
+	height: 20px
+	color: #FFF
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+
+
 .container
 	background: $backcolor
+	position: relative
 
 .text-head
 	color: #000
@@ -57,9 +230,13 @@ body, h1
 	padding: 15px 0
 .photo-wrapper__img
 	width: 50%
+	height: 50%
 	border-radius: 50%
 	margin: 0 auto
 	position: relative
+	img
+		height: 100%
+		width: 100%
 
 .photo-wrapper__plus
 	width: 31px
@@ -77,6 +254,7 @@ body, h1
 	transform: translateY(50%)
 	transition: 0.5s ease-in-out
 	font-size: 9px
+	max-width: 100px
 	&:before
 		content: ''
 		display: block
@@ -88,13 +266,16 @@ body, h1
 		left: 10px
 		transform: translate(0,-50%) rotate(45deg)
 
+.tooltip_nowrap
+	white-space: nowrap
+
 .photo-wrapper__plus:hover .tooltip
 	opacity: 1
-	transform: translateY(0%)
+	transform: translateY(30%)
 
 .button-edit:hover .tooltip
 	opacity: 1
-	transform: translateY(0%)
+	transform: translateY(30%)
 
 .left-side
 	.text-descr
@@ -105,10 +286,29 @@ body, h1
 	margin: 0 auto
 	text-align: center
 	position: relative
+	margin-bottom: 20px
 
 .wrapper_with-underline
 	border-bottom: 1px solid #000
 	display: inline-block
+	position: relative
+
+.visibility
+	position: absolute
+	top: 0
+	right: -20%
+	transform: translateY(50%)
+	background: none
+	z-index: 10
+	cursor: pointer
+	img
+		width: 100%
+	.tooltip
+		z-index: 10
+	&:hover .tooltip
+		transform: translateY(30%)
+		opacity: 1
+
 
 .img-wrapper
 	padding: 15px 0
@@ -134,7 +334,7 @@ body, h1
 	.CaptionCont
 		width: 100%
 		position: relative
-		z-index: 100
+		z-index: 9
 		display: block
 		border: none
 		border-radius: 5px
@@ -245,8 +445,21 @@ input[type="submit"]
 	border-radius: 30px
 	color: #ffffff
 	font-family: "Myriad Pro"
-	font-size: 11px
+	font-size: 14px
 	font-weight: 700
+
+.delete
+	background: rgba(178, 178, 178, 1)
+	border: none
+	outline: none
+	width: 101px
+	height: 31px
+	border-radius: 30px
+	color: #ffffff
+	font-family: "Myriad Pro"
+	font-size: 14px
+	font-weight: 700
+	margin-right: 20px
 
 .radio-choice__radio
 	margin: 15px 0
@@ -259,19 +472,22 @@ input[type="submit"]
 	border: 1px solid $regularcolor
 	display: inline-block
 	position: relative
+	flex: 0 1 13px
 	&:after
 		content: ''
 		position: absolute
-		display: none
-		width: 8px
-		height: 8px
+		display: block
+		transition: 0.5s ease-in-out
+		width: 9px
+		height: 9px
 		border-radius: 50%
 		background: $regularcolor
-		top: 50%
-		left: 50%
-		transform: translate( -55%, -45%)
+		top: 1px
+		left: 1px
+		transform: scale(0)
 .radio-choice__radio__text
 	display: inline-block
+	flex: 1
 
 .radio-choice__radio__wrapper
 	display: flex
@@ -280,7 +496,7 @@ input[type="submit"]
 input[type="radio"]
 	display: none
 	&:checked ~ .radio-choice__radio__circle:after
-		display: block
+		transform: scale(1)
 
 .news
 	margin-bottom: 25px
@@ -301,8 +517,208 @@ input[type="radio"]
 	text-decoration: underline
 
 .second-screen
-	border-top: 1px solid $regularcolor
-	border-bottom: 1px solid $regularcolor
+	border-top: 1px solid #f07e1a
+	border-bottom: 1px solid #f07e1a
 
+.center-side
+	position: relative
+
+.text-wrapper-big-tooltip
+	background: linear-gradient(to left, $lightgradient, $darkgradient)
+	padding: 20px
+	border-radius: 5px
+	position: relative
+	z-index: 10
+	margin-bottom: 20px
+.text-wrapper-big-tooltip_tooltip-tail
+	position: absolute
+	z-index: 5
+	width: 20px
+	height: 20px
+	transform: rotate(45deg) translate(-50%)
+	top: 0px
+	left: 50%
+	background: #f86f11
+
+
+.text-head_white
+	color: #fff
+	text-align: right
+	margin-bottom: 10px
+
+.text-main_white
+	color: #FFF
+
+
+.input__field_diff-size
+	input
+		width: 100%
+		margin: 0
+	textarea
+		height: 128px
+
+.input__field_date
+	display: flex
+	align-items: center
+	justify-content: space-between
+	input
+		width: 30%
+		margin: 0
+		&:nth-child(2)
+			margin: 0 20px
+		&::placeholder
+			color: #DDD
+
+.modal-content
+  text-align: center
+  padding: 20px
+  position: relative
+  background: $backcolor
+  .modal-header
+    border: none
+    .modal-title
+      font-family: 'Myriad pro bold', sans-serif
+      font-weight: bold
+      font-size: 18px
+    .close
+      position: absolute
+      top: 10px
+      right: 10px
+  .modal-footer
+    border: none
+    .btn-primary
+      float: left
+      width: 175px
+      height: 40px
+      background: transparent
+      border: 1px solid gray
+      outline: none
+      margin-bottom: 10px
+      color: gray
+    .btn-secondary
+      float: right
+      width: 175px
+      height: 40px
+      padding: 10px 20px
+      background: transparent
+      border: 1px solid black
+      outline: none
+      margin-bottom: 10px
+      -webkit-border-radius: 0px
+      border-radius: 0px
+      position: relative
+      color: #FFF
+      background: #fd7801
+      border: none
+      cursor: pointer
+  .modal-body
+    text-align: center
+    input
+      width: 100%
+      height: 40px
+      padding: 5px
+      color: #333
+      background: transparent
+      border: 1px solid #333
+    textarea
+      width: 100%
+      height: 100px
+      padding: 5px
+      color: #333
+      background: transparent
+      border: 1px solid #333
+      &:focus
+        outline: none
+    .name_field
+      margin: 10px 0
+
+.name_field_center
+  text-align: center
+
+#edit_visibility
+	position: absolute
+	display: none
+	top: 100%
+	z-index: 100
+	width: 300px
+	text-align: left
+	transform: translate(-50%,0)
+	box-shadow: 2px 2px 3px 1px #AAA
+	background: $backcolor
+	border-radius: 5px
+	border: 1px solid $regularcolor
+.visibility__container
+	padding: 15px
+.visibility__row
+	display: flex
+	align-items: flex-end
+	justify-content: space-between
+	padding: 10px 0
+	label
+		margin-bottom: 0px
+	.input__checkbox
+		padding: 0px
+.visibility__name
+	font-family: 'Myriad pro bold', sans-serif
+
+
+
+
+@media screen and (max-width: 1024px)
+	.container
+		width: 100%
+	.lk-block
+		flex-direction: column
+		align-items: center
+	.left-side, .center-side, .right-side
+		width: 100%
+		padding: 0px
+	.left-side
+		padding-bottom: 25px
+		border-bottom: 1px solid #f07e1a
+		margin-bottom: 49px
+	.center-side
+		margin-bottom: 21px
+		padding-bottom: 25px
+		border-bottom: 1px solid #f07e1a
+	.left-side__container, .center-side__container, .right-side__container
+		width: 410px
+		margin: 0 auto
+	.center-side
+		border-right: none
+		border-left: none
+	.second-screen
+		.center-side, .left-side
+			border: none
+		.center-side
+			order: 1
+		.left-side
+			margin-bottom: 0px
+	.text-wrapper-big-tooltip_tooltip-tail, .text-wrapper-big-tooltip
+		display: none
+	.third-screen
+		.left-side, .center-side, .right-side
+			border: none
+	.background-01,
+	.background-02,
+	.background-03,
+	.background-04,
+	.background-05,
+	.background-06,
+	.background-07,
+	.background-08,
+	.background-09
+		display: none
+
+@media screen and (max-width: 950px)
+	.header
+		display: none
+
+@media screen and (max-width: 768px)
+	.left-side__container, .center-side__container, .right-side__container
+		max-width: 300px
+		margin: 0 auto
+	#edit_visibility
+		transform: translate(-80%, 0)
 
 

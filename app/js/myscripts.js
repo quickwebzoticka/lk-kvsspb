@@ -24,6 +24,16 @@ $(document).ready(function() {
 				img.attr('src', 'img/phone.svg');
 			}
 		}
+	});
 
+	$(document).on('click', '.visibility', function(){
+		$('#edit_visibility').slideDown();
 	})
+	  $(document).click( function(event){
+	  if ( $(event.target).closest('#edit_visibility').length || $(event.target).closest('.visibility').length ) 
+	        return;
+
+	      $('#edit_visibility').slideUp();
+	      event.stopPropagation();
+	    });
 });
