@@ -237,6 +237,11 @@ body, h1
 	img
 		height: 100%
 		width: 100%
+		border-radius: 50%
+
+.photo-wrapper__img_no-border-radius
+	img
+		border-radius: 0%
 
 .photo-wrapper__plus
 	width: 31px
@@ -245,6 +250,11 @@ body, h1
 	bottom: 15px
 	right: 15px
 	cursor: pointer
+
+.photo-wrapper__plus_position
+	bottom: -20px
+	right: -30px
+
 .tooltip
 	position: absolute
 	background: #FFF
@@ -292,6 +302,7 @@ body, h1
 	border-bottom: 1px solid #000
 	display: inline-block
 	position: relative
+	line-height: 10px
 
 .visibility
 	position: absolute
@@ -709,6 +720,70 @@ input[type="radio"]
 	.background-08,
 	.background-09
 		display: none
+
+.input__field_centered
+	justify-content: center
+	margin-top: 10px
+	.input__logo
+		margin-right: 10px
+
+.service
+	text-align: center
+	font-family: "Myriad pro bold", sans-serif
+	color: #b2b2b2
+	text-decoration: underline
+
+.btn-wrapper_center
+	justify-content: center
+	margin-top: 20px
+	input[type="submit"]
+		font-family: 'Myriad pro bold'
+		width: 140px
+
+.service_name
+	color: #000
+
+.service_short
+	width: 200px
+	margin: 10px auto
+	text-align: left
+
+.btn-wrapper_margin-top
+	margin-top: 114px
+
+.lk-block_no-padding-bottom
+	padding: 50px 0 0px
+
+.lk-block_no-padding
+	padding: 0px
+
+.second-screen_no-border
+	border: none
+
+.left-side_padding-top
+	padding-top: 50px
+
+.input__output_modified
+	text-decoration: underline
+	font-family: 'Myriad pro'
+
+.input__output_on
+	color: $regularcolor
+
+.lk-block_padding-bottom
+	padding-bottom: 50px
+	padding-top: 30px
+
+@media screen and (max-width: 1024px)
+	.btn-wrapper_margin-top
+		margin-top: 20px
+	.second-screen_no-border
+		border-top: 1px solid $regularcolor
+	.lk-block_no-padding
+		padding-top: 50px
+	.lk-block_padding-bottom
+		padding-top: 0px
+		padding-bottom: 0px
 
 @media screen and (max-width: 950px)
 	.header

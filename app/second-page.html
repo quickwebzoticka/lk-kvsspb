@@ -68,7 +68,7 @@
 			<div class="background-09">
 				<img src="img/background-09.png" alt="background">
 			</div>
-			<section class="lk-block first-screen">
+			<section class="lk-block first-screen lk-block_no-padding-bottom">
 				<div class="left-side">
 					<div class="left-side__container">
 						<form action="">
@@ -85,20 +85,26 @@
 									<span class="text-head">Илья Квантов</span>, <span class="text-head_thin">30лет</span>
 								</div>
 							</div>
+							<div class="service">
+								ЖК "Линкор", корпус 6
+							</div>
+							<div class="service">
+								Интернет-маркетолог
+							</div>
 							<div class="input-with-edit">
-								<div class="input__field">
+								<div class="input__field input__field_centered">
 									<div class="input__logo">
 										<img src="img/phone-off.svg" alt="phone" class="phone-switcher">
 									</div>
-									<div class="phone__output">скрыт от соседей</div>
+									<div class="phone__output input__output_modified">скрыт от соседей</div>
 								</div>
 							</div>
 							<div class="input-with-edit">
-								<div class="input__field">
+								<div class="input__field input__field_centered">
 									<div class="input__logo">
 										<img src="img/email.svg" alt="email" class="email-switcher">
 									</div>
-									<div class="phone__output">kvantov@kvsspb.ru</div>
+									<div class="phone__output input__output_modified input__output_on">kvantov@kvsspb.ru</div>
 								</div>
 							</div>
 							<div class="btn-wrapper btn-wrapper_center">
@@ -109,10 +115,13 @@
 				</div>
 				<div class="center-side">
 					<div class="center-side__container">
-						<div class="photo-wrapper">
-							<div class="photo-wrapper__img">
-								<img src="img/service.svg" alt="service">
-								<div class="photo-wrapper__plus">
+						<div class="text-head text-head_center">
+							Мои услуги
+						</div>
+						<div class="img-wrapper img-wrapper_small">
+							<div class="photo-wrapper__img photo-wrapper__img_no-border-radius">
+								<img src="img/service-no-back.svg" alt="service">
+								<div class="photo-wrapper__plus photo-wrapper__plus_position">
 									<img src="img/plus.svg" alt="plus">
 									<div class="tooltip tooltip_nowrap">
 										Добавить услугу
@@ -120,7 +129,15 @@
 								</div>
 							</div>
 						</div>
-						
+						<div class="service service_name">
+							Электрик
+						</div>
+						<div class="service service_short">
+							Провожу электрическую проводку, устанавливаю счетчики
+						</div>
+						<div class="btn-wrapper btn-wrapper_center btn-wrapper_margin-top">
+							<button class="delete">Удалить</button>
+						</div>
 					</div>
 				</div>
 				<div class="right-side">
@@ -166,7 +183,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="lk-block second-screen">
+			<section class="lk-block second-screen second-screen_no-border lk-block_no-padding">
 				<div class="left-side">
 					<div class="left-side__container">
 						<div class="text-head text-head_center">
@@ -179,7 +196,17 @@
 						</div>
 						<div class="name">
 							<div class="wrapper_with-underline">
-								<span class="text-head">Илья Квантов</span>, <span class="text-head_thin">30лет</span>
+								<span class="text-head">Анна</span>
+							</div>
+						</div>
+						<div class="name">
+							<div class="wrapper_with-underline">
+								Жена
+							</div>
+						</div>
+						<div class="name">
+							<div class="wrapper_with-underline">
+								Пекарь
 							</div>
 						</div>
 						<div class="btn-wrapper btn-wrapper_center">
@@ -198,16 +225,13 @@
 					</div>
 				</div>
 			</section>
-			<section class="lk-block third-screen">
-				<div class="left-side">
+			<section class="lk-block third-screen lk-block_no-padding lk-block_padding-bottom">
+				<div class="left-side lk-block_padding-bottom">
 					<div class="left-side__container">
-						<div class="text-head text-head_center">
-							Моя семья
-						</div>
-						<div class="photo-wrapper">
-							<div class="photo-wrapper__img">
-								<img src="img/family.svg" alt="family">
-								<div class="photo-wrapper__plus">
+						<div class="img-wrapper img-wrapper_small">
+							<div class="photo-wrapper__img photo-wrapper__img_no-border-radius">
+								<img src="img/family-no-back.svg" alt="family">
+								<div class="photo-wrapper__plus photo-wrapper__plus_position">
 									<img src="img/plus.svg" alt="plus">
 									<div class="tooltip">
 										Добавить родственников, проживающих с Вами
@@ -231,13 +255,11 @@
 		<form class="modal-dialog" method="post" name="form2" action="/" enctype="multipart/form-data">
 			<input type="hidden" name="sessid" id="sessid" value="c57310a7d2634f0aa522bf6d6764b544">		<input type="hidden" name="lang" value="s2">
 			<input type="hidden" name="ID" value="11750">
-
 			<input type="hidden" name="UF_SHOW_PHONE" value="">
 			<input type="hidden" name="UF_SHOW_EMAIL" value="">
 			<input type="hidden" name="change_phone" value="">
 			<input type="hidden" name="change_email" value="123123">
 			<input type="hidden" name="save" value="Сохранить">
-
 		    <div class="modal-content">
 		    	<div class="modal-header">
 		    		<h5 class="modal-title">Изменения контактной информации<br> будут отправлены застройщику.</h5>

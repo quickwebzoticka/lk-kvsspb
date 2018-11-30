@@ -297,7 +297,13 @@ body, h1 {
   position: relative; }
   .photo-wrapper__img img {
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    -webkit-border-radius: 50%;
+            border-radius: 50%; }
+
+.photo-wrapper__img_no-border-radius img {
+  -webkit-border-radius: 0%;
+          border-radius: 0%; }
 
 .photo-wrapper__plus {
   width: 31px;
@@ -306,6 +312,10 @@ body, h1 {
   bottom: 15px;
   right: 15px;
   cursor: pointer; }
+
+.photo-wrapper__plus_position {
+  bottom: -20px;
+  right: -30px; }
 
 .tooltip {
   position: absolute;
@@ -363,7 +373,8 @@ body, h1 {
 .wrapper_with-underline {
   border-bottom: 1px solid #000;
   display: inline-block;
-  position: relative; }
+  position: relative;
+  line-height: 10px; }
 
 .visibility {
   position: absolute;
@@ -890,6 +901,76 @@ input[type="radio"] {
   .background-08,
   .background-09 {
     display: none; } }
+
+.input__field_centered {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px; }
+  .input__field_centered .input__logo {
+    margin-right: 10px; }
+
+.service {
+  text-align: center;
+  font-family: "Myriad pro bold", sans-serif;
+  color: #b2b2b2;
+  text-decoration: underline; }
+
+.btn-wrapper_center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px; }
+  .btn-wrapper_center input[type="submit"] {
+    font-family: 'Myriad pro bold';
+    width: 140px; }
+
+.service_name {
+  color: #000; }
+
+.service_short {
+  width: 200px;
+  margin: 10px auto;
+  text-align: left; }
+
+.btn-wrapper_margin-top {
+  margin-top: 114px; }
+
+.lk-block_no-padding-bottom {
+  padding: 50px 0 0px; }
+
+.lk-block_no-padding {
+  padding: 0px; }
+
+.second-screen_no-border {
+  border: none; }
+
+.left-side_padding-top {
+  padding-top: 50px; }
+
+.input__output_modified {
+  text-decoration: underline;
+  font-family: 'Myriad pro'; }
+
+.input__output_on {
+  color: #f17a42; }
+
+.lk-block_padding-bottom {
+  padding-bottom: 50px;
+  padding-top: 30px; }
+
+@media screen and (max-width: 1024px) {
+  .btn-wrapper_margin-top {
+    margin-top: 20px; }
+  .second-screen_no-border {
+    border-top: 1px solid #f17a42; }
+  .lk-block_no-padding {
+    padding-top: 50px; }
+  .lk-block_padding-bottom {
+    padding-top: 0px;
+    padding-bottom: 0px; } }
 
 @media screen and (max-width: 950px) {
   .header {
