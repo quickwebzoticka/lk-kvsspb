@@ -73,194 +73,54 @@
 					<div class="left-side__container">
 						<form action="">
 							<div class="text-head text-head_center">
-								Мое фото
+								Мой профиль
 							</div>
 							<div class="photo-wrapper">
 								<div class="photo-wrapper__img">
 									<img src="img/avatar.svg" alt="avatar">
-									<div class="photo-wrapper__plus">
-										<img src="img/plus.svg" alt="plus">
-										<div class="tooltip tooltip_nowrap">
-											Загрузить фото
-										</div>
-									</div>
 								</div>
-							</div>
-							<div class="text-descr">
-								Формат: jpg, gif, png<br>
-								Максимальный размер файла: 2 Mb<br>
-								Рекомендованный размер: 200х200 px
 							</div>
 							<div class="name">
 								<div class="wrapper_with-underline">
 									<span class="text-head">Илья Квантов</span>, <span class="text-head_thin">30лет</span>
-									<div class="visibility">
-										<img src="img/visibility.svg" alt="visibility">
-										<div class="tooltip">
-											Настройки приватности
-										</div>
-										<div id="edit_visibility">
-										    <div class="visibility__container">
-										    	<div class="visibility__body">
-										    		<div class="visibility__row">
-										    			<div class="visibility__name">Илья</div>
-										    		</div>
-										    		<div class="visibility__row">
-										    			<div class="visibility__name">Капусткин</div>
-										    			<div class="input__checkbox">
-															<label>
-																<input type="checkbox">
-																<div class="input__checkbox__square"></div>
-																Показывать соседям
-															</label>
-														</div>
-										    		</div>
-										    		<div class="visibility__row">
-										    			<div class="visibility__name">Киркорович</div>
-										    			<div class="input__checkbox">
-															<label>
-																<input type="checkbox">
-																<div class="input__checkbox__square"></div>
-																Показывать соседям
-															</label>
-														</div>
-										    		</div>
-										    		<div class="visibility__row">
-										    			<div class="visibility__date">
-										    				<div class="input__label">Дата рождения</div>
-										    				<div class="visibility__counts">07 января 1 года</div>
-										    			</div>
-										    			<div class="input__checkbox">
-															<label>
-																<input type="checkbox">
-																<div class="input__checkbox__square"></div>
-																Показывать соседям
-															</label>
-														</div>
-										    		</div>
-										    	</div>
-												<div class="btn-wrapper">
-													<input type="submit" value="Изменить" type="submit" name="save">
-												</div>
-										    </div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="input">
-								<div class="input__label">Семейное положение</div>
-								<div class="input__field">
-									<select name="select" id="select" class="select">
-										<option value="">Не выбрано</option>
-										<option value="">Не замужем/Не женат</option>
-										<option value="">Разведен/Разведена</option>
-										<option value="">В гражданском браке</option>
-									</select>
-								</div>
-							</div>
-							<div class="input">
-								<div class="input__label">Род деятельности</div>
-								<div class="input__field">
-									<textarea name="" id="" cols="30" rows="10"></textarea>
 								</div>
 							</div>
 							<div class="input-with-edit">
-								<div class="input__label">Телефон/логин (скрыт от соседей)</div>
 								<div class="input__field">
 									<div class="input__logo">
 										<img src="img/phone-off.svg" alt="phone" class="phone-switcher">
 									</div>
-									<input type="text" class="input-tel">
-									<div class="button-edit" data-target="#edit_contacts" data-toggle="modal">
-										<img src="img/edit.svg" alt="edit">
-										<div class="tooltip">
-											Редактировать данные
-										</div>
-									</div>	
-								</div>
-								<div class="input__checkbox">
-									<label>
-										<input type="checkbox">
-										<div class="input__checkbox__square"></div>
-										Показывать соседям
-									</label>
+									<div class="phone__output">скрыт от соседей</div>
 								</div>
 							</div>
 							<div class="input-with-edit">
-								<div class="input__label">E-mail (виден соседям)</div>
 								<div class="input__field">
 									<div class="input__logo">
 										<img src="img/email.svg" alt="email" class="email-switcher">
 									</div>
-									<input type="text" class="input-tel">
-									<div class="button-edit" data-target="#edit_contacts" data-toggle="modal">
-										<img src="img/edit.svg" alt="edit">
-										<div class="tooltip">
-											Редактировать данные
-										</div>
-									</div>	
-								</div>
-								<div class="input__checkbox">
-									<label>
-										<input type="checkbox" checked>
-										<div class="input__checkbox__square"></div>
-										Показывать соседям
-									</label>
+									<div class="phone__output">kvantov@kvsspb.ru</div>
 								</div>
 							</div>
-							<div class="btn-wrapper">
-								<input type="submit" value="Сохранить">
-							</div>
+							<div class="btn-wrapper btn-wrapper_center">
+								<input type="submit" value="Редактировать">
+							</div>							
 						</form>
 					</div>
 				</div>
 				<div class="center-side">
 					<div class="center-side__container">
-						<div class="img-wrapper">
-							<img src="img/center.svg" alt="apparts">
-						</div>
-						<div class="text-head">Мои помещения</div>
-						<div class="text-descr">Если вы являетесь покупателем нескольких квартир, отметьте фактический адрес проживания в списке</div>
-						<div class="radio-choice">
-							<div class="radio-choice__radio">
-								<label>
-									<div class="radio-choice__radio__head">ЖК «Ясно.Янино»</div>
-									<div class="radio-choice__radio__wrapper">
-										<input type="radio" name="zhk" checked>
-										<div class="radio-choice__radio__circle"></div>
-										<div class="radio-choice__radio__text">Корпус 7.1, 8 этаж, 2-комнтаная, 59,29 кв. м.</div>
+						<div class="photo-wrapper">
+							<div class="photo-wrapper__img">
+								<img src="img/service.svg" alt="service">
+								<div class="photo-wrapper__plus">
+									<img src="img/plus.svg" alt="plus">
+									<div class="tooltip tooltip_nowrap">
+										Добавить услугу
 									</div>
-									
-								</label>
-							</div>
-							<div class="radio-choice__radio">
-								<label>
-									<div class="radio-choice__radio__head">ЖК «Линкор»</div>
-									<div class="radio-choice__radio__wrapper">
-										<input type="radio" name="zhk">
-										<div class="radio-choice__radio__circle"></div>
-										<div class="radio-choice__radio__text">Корпус 6, 9 этаж, 1-комнтаная, 38,9 кв. м.</div>
-									</div>
-								</label>
-							</div>
-							<div class="radio-choice__radio">
-								<label>
-									<div class="radio-choice__radio__head">ЖК «Кирил и Дарья»</div>
-									<div class="radio-choice__radio__wrapper">
-										<input type="radio" name="zhk">
-										<div class="radio-choice__radio__circle"></div>
-										<div class="radio-choice__radio__text">Корпус 1, 3 этаж, 1-комнтаная, 79,94 кв. м.</div>
-									</div>
-								</label>
+								</div>
 							</div>
 						</div>
-						<div class="input__checkbox">
-							<label>
-								<input type="checkbox">
-								<div class="input__checkbox__square"></div>
-								Показывать соседям
-							</label>
-						</div>
+						
 					</div>
 				</div>
 				<div class="right-side">
@@ -309,51 +169,32 @@
 			<section class="lk-block second-screen">
 				<div class="left-side">
 					<div class="left-side__container">
+						<div class="text-head text-head_center">
+							Моя семья
+						</div>
 						<div class="photo-wrapper">
 							<div class="photo-wrapper__img">
-								<img src="img/service.svg" alt="service">
-								<div class="photo-wrapper__plus">
-									<img src="img/plus.svg" alt="plus">
-									<div class="tooltip tooltip_nowrap">
-										Добавить услугу
-									</div>
-								</div>
+								<img src="img/avatar.svg" alt="avatar">
 							</div>
+						</div>
+						<div class="name">
+							<div class="wrapper_with-underline">
+								<span class="text-head">Илья Квантов</span>, <span class="text-head_thin">30лет</span>
+							</div>
+						</div>
+						<div class="btn-wrapper btn-wrapper_center">
+							<input type="submit" value="Редактировать">
 						</div>
 					</div>
 				</div>
 				<div class="center-side">
 					<div class="center-side__container">
-						<div class="text-wrapper-big-tooltip_tooltip-tail"></div>
-						<div class="text-wrapper-big-tooltip">
-							<div class="text-head text-head_white">
-								Чем можете быть полезны?
-							</div>	
-							<div class="text-main text-main_white">
-								Предложите свои услуги. Расскажите о себе как о «полезном соседе»!
-								Например, если Вы занимаетесь репетиторством, делаете свадебные прически на дому или предоставляете консультации юриста — эта информация наверняка будет полезна вашим соседям!
-							</div>
-						</div>
-						<div class="btn-wrapper">
-							<button class="delete">Удалить</button>
-							<input type="submit" value="Сохранить">
-						</div>
+						
 					</div>
 				</div>
 				<div class="right-side">
 					<div class="right-side__container">
-						<div class="input">
-							<div class="input__label">Название услуги</div>
-							<div class="input__field input__field_diff-size">
-								<input type="text">
-							</div>
-						</div>
-						<div class="input">
-							<div class="input__label">Род деятельности</div>
-							<div class="input__field input__field_diff-size">
-								<textarea name="" id="" cols="30" rows="10"></textarea>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</section>
@@ -378,48 +219,7 @@
 				</div>
 				<div class="center-side">
 					<div class="center-side__container">
-						<div class="input">
-							<div class="input__label">Имя</div>
-							<div class="input__field input__field_diff-size">
-								<input type="text">
-							</div>
-						</div>
-						<div class="input">
-							<div class="input__label">Фамилия</div>
-							<div class="input__field input__field_diff-size">
-								<input type="text">
-							</div>
-						</div>
-						<div class="input">
-							<div class="input__label">Отчество</div>
-							<div class="input__field input__field_diff-size">
-								<input type="text">
-							</div>
-						</div>
-						<div class="input">
-							<div class="input__label">Дата рождения</div>
-							<div class="input__field input__field_date">
-								<input type="text" placeholder="Число">
-								<input type="text" placeholder="Месяц">
-								<input type="text" placeholder="Год">
-							</div>
-						</div>
-						<div class="input">
-							<div class="input__label">Родственные отношения</div>
-							<div class="input__field input__field_diff-size">
-								<input type="text">
-							</div>
-						</div>
-						<div class="input">
-							<div class="input__label">Род деятельности</div>
-							<div class="input__field input__field_diff-size">
-								<textarea name="" id="" cols="30" rows="10"></textarea>
-							</div>
-						</div>
-						<div class="btn-wrapper">
-							<button class="delete">Удалить</button>
-							<input type="submit" value="Сохранить">
-						</div>
+						
 					</div>
 				</div>
 				<div class="right-side"></div>
