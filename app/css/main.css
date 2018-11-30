@@ -676,7 +676,22 @@ input[type="radio"] {
 
 .second-screen {
   border-top: 1px solid #f07e1a;
-  border-bottom: 1px solid #f07e1a; }
+  border-bottom: 1px solid #f07e1a;
+  display: block; }
+
+.service__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
 
 .center-side {
   position: relative; }
@@ -861,6 +876,16 @@ input[type="radio"] {
   .container {
     width: 100%; }
   .lk-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .service__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
