@@ -573,7 +573,16 @@ input[type="submit"] {
   color: #ffffff;
   font-family: "Myriad Pro";
   font-size: 14px;
-  font-weight: 700; }
+  font-weight: 700;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
+  input[type="submit"]:hover {
+    -webkit-transform: translateY(-5%);
+        -ms-transform: translateY(-5%);
+            transform: translateY(-5%);
+    -webkit-box-shadow: 0px 3px 10px #999;
+            box-shadow: 0px 3px 10px #999; }
 
 .delete {
   background: #b2b2b2;
