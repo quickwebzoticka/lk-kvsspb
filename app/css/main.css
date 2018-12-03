@@ -528,7 +528,7 @@ textarea {
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin: 0 20px;
+    margin: 0 0 0 20px;
     height: 30px;
     border: none;
     -webkit-border-radius: 5px;
@@ -1062,3 +1062,9 @@ input[type="radio"] {
 .btn-wrapper.btn-wrapper_center .add-family-btn {
   font-family: 'Myriad Pro';
   width: 200px; }
+
+.btn-wrapper .change-contacts {
+  width: 150px; }
+
+.right-side__container {
+  padding-bottom: 30px; }

@@ -40,7 +40,10 @@ $(document).ready(function() {
 		familyWrapper  = $('.family-wrapper');
 
 	$(document).on('click', '.service__wrapper .photo-wrapper__plus', function(){
-		serviceWrapper.clone().hide().appendTo($('.service__wrapper .right-side')).show();
+		serviceWrapper.clone()
+					  .appendTo($('.service__wrapper .right-side'));
+		$('.service__wrapper .right-side__container:last').find('input:not([type="submit"]), textarea').val('');
+					  
 	});
 	$(document).on('click', '.add-family-btn', function(){
 		familyWrapper.clone().hide().appendTo($('.third-screen')).show();
