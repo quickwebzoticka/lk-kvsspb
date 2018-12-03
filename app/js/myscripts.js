@@ -1,30 +1,29 @@
 $(document).ready(function() {
 	console.log('Hello there!');
-	$('.select').SumoSelect()
+	$('.select').SumoSelect();
 
-	$(document).on('click', '.input__checkbox', function() {
-		var img, imgsrc,
-			checkbox = $(this).find('input[type="checkbox"]');
-
-		if ($(this).parent('.input-with-edit').find('.email-switcher').length > 0) {
-			img = $('.email-switcher');
-			imgsrc = img.attr('src');
-			if (imgsrc == '/lk/img/email.svg' && !checkbox.is(':checked')) {
-				img.attr('src', '/lk/img/email-off.svg');
-			} else {
-				img.attr('src', '/lk/img/email.svg');
-			}
-		} 
-		if ($(this).parent('.input-with-edit').find('.phone-switcher').length > 0) {
-			img = $('.phone-switcher');
-			imgsrc = img.attr('src');
-			if (imgsrc == '/lk/phone.svg' && !checkbox.is(':checked')) {
-				img.attr('src', '/lk/img/phone-off.svg');
-			} else {
-				img.attr('src', '/lk/img/phone.svg');
-			}
+	$(document).on('click', '.phone-switcher-tumblr', function(e){
+		console.log($('.phone-switcher').attr('src'));
+		if ($('.phone-switcher').attr('src') == 'img/phone-off.svg') {
+			$('.phone-switcher').attr('src', 'img/phone.svg');
+			$(this).find('input[type="checkbox"]').prop('checked', true);
+		} else {
+			$('.phone-switcher').attr('src', 'img/phone-off.svg');
+			$(this).find('input[type="checkbox"]').prop('checked', false);
 		}
-	});
+		return false;
+	})
+	$(document).on('click', '.email-switcher-tumblr', function(e){
+		console.log($('.email-switcher').attr('src'));
+		if ($('.email-switcher').attr('src') == 'img/email-off.svg') {
+			$('.email-switcher').attr('src', 'img/email.svg');
+			$(this).find('input[type="checkbox"]').prop('checked', true);
+		} else {
+			$('.email-switcher').attr('src', 'img/email-off.svg');
+			$(this).find('input[type="checkbox"]').prop('checked', false);
+		}
+		return false;
+	})
 
 	$(document).on('click', '.visibility', function(){
 		$('#edit_visibility').slideDown();
