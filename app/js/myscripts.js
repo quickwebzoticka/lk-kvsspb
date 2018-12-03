@@ -9,19 +9,19 @@ $(document).ready(function() {
 		if ($(this).parent('.input-with-edit').find('.email-switcher').length > 0) {
 			img = $('.email-switcher');
 			imgsrc = img.attr('src');
-			if (imgsrc == 'img/email.svg' && !checkbox.is(':checked')) {
-				img.attr('src', 'img/email-off.svg');
+			if (imgsrc == '/lk/img/email.svg' && !checkbox.is(':checked')) {
+				img.attr('src', '/lk/img/email-off.svg');
 			} else {
-				img.attr('src', 'img/email.svg');
+				img.attr('src', '/lk/img/email.svg');
 			}
 		} 
 		if ($(this).parent('.input-with-edit').find('.phone-switcher').length > 0) {
 			img = $('.phone-switcher');
 			imgsrc = img.attr('src');
-			if (imgsrc == 'img/phone.svg' && !checkbox.is(':checked')) {
-				img.attr('src', 'img/phone-off.svg');
+			if (imgsrc == '/lk/phone.svg' && !checkbox.is(':checked')) {
+				img.attr('src', '/lk/img/phone-off.svg');
 			} else {
-				img.attr('src', 'img/phone.svg');
+				img.attr('src', '/lk/img/phone.svg');
 			}
 		}
 	});
@@ -36,17 +36,14 @@ $(document).ready(function() {
 	  $('#edit_visibility').slideUp();
 	  event.stopPropagation();
 	});
-	var serviceWrapper = $('.service__wrapper');
+	var serviceWrapper = $('.service__wrapper .right-side__container'),
+		familyWrapper  = $('.family-wrapper');
 
 	$(document).on('click', '.service__wrapper .photo-wrapper__plus', function(){
-		serviceWrapper.clone().hide().appendTo($('.second-screen')).show();
-		$('.service__wrapper .left-side__container:not(:first)').hide();
-		$('.service__wrapper .center-side__container:not(:first)').hide();
+		serviceWrapper.clone().hide().appendTo($('.service__wrapper .right-side')).show();
 	});
-	// $(document).on('click', '.service__wrapper .photo-wrapper__plus', function(){
-	// 	serviceWrapper.clone().hide().appendTo($('.second-screen')).show();
-	// 	$('.service__wrapper .left-side__container:not(:first)').hide();
-	// 	$('.service__wrapper .center-side__container:not(:first)').hide();
-	// });
+	$(document).on('click', '.add-family-btn', function(){
+		familyWrapper.clone().hide().appendTo($('.third-screen')).show();
+	});
 });
 

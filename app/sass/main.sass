@@ -14,6 +14,9 @@
 body, h1
 	font-family: 'Myriad Pro', sans-serif
 
+body
+	background: #FFF
+
 .wrapper
 	overflow: hidden
 
@@ -138,6 +141,26 @@ body, h1
 		top: 48%
 		right: -20%
 
+.content
+	font-size: 14px
+
+body.back
+	background: #FFF
+
+.kvs-select
+	width: 100% !important
+
+.family-wrapper
+	display: flex
+	justify-content: space-between
+	align-items: stretch
+	width: 100%
+
+@media screen and (max-width: 1024px)
+	.family-wrapper
+		flex-direction: column
+		align-items: center
+
 .header
 	background: #333
 	.container
@@ -247,8 +270,8 @@ body, h1
 	width: 31px
 	height: 31px
 	position: absolute
-	bottom: 15px
-	right: 15px
+	bottom: 10px
+	right: 10px
 	cursor: pointer
 
 .photo-wrapper__plus_position
@@ -308,7 +331,6 @@ body, h1
 	position: absolute
 	top: 0
 	right: -20%
-	transform: translateY(50%)
 	background: none
 	z-index: 10
 	cursor: pointer
@@ -459,6 +481,7 @@ input[type="submit"]
 	font-size: 14px
 	font-weight: 700
 	transition: 0.3s ease-in-out
+	padding: 0px
 	&:hover
 		transform: translateY(-5%)
 		box-shadow: 0px 3px 10px #999
@@ -589,6 +612,9 @@ input[type="radio"]
 			margin: 0 20px
 		&::placeholder
 			color: #DDD
+
+.third-screen
+	display: block
 
 .modal-content
   text-align: center
@@ -808,5 +834,9 @@ input[type="radio"]
 		margin: 0 auto
 	#edit_visibility
 		transform: translate(-80%, 0)
+
+.btn-wrapper.btn-wrapper_center .add-family-btn
+	font-family: 'Myriad Pro'
+	width: 200px
 
 
