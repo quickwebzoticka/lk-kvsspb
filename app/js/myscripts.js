@@ -50,5 +50,16 @@ $(document).ready(function() {
 	$(document).on('click', '.mob-hamburger', function(){
 		$('.ul_out').slideToggle(400);
 	});
+
+	function test(func1, func2){
+
+	};
+
+	function func1(){
+		console.log('Hello there!');
+	};
+	function func2(){
+		console.log()
+	}
 });
 
