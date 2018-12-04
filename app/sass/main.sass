@@ -177,11 +177,11 @@ body.back
 	.container
 		background: transparent
 		padding: 0px
-	ul
+	.ul_out
 		margin-bottom: 0px
 		display: flex
 		align-items: stretch
-		li
+		.ul_out__li
 			display: flex
 			align-items: center
 			justify-content: center
@@ -200,6 +200,8 @@ body.back
 				border-left: 1px solid #FFF
 			&:hover:before
 				height: 3px
+			&:hover .ul_inner
+				max-height: 400px
 			a
 				text-transform: uppercase
 				display: block
@@ -208,6 +210,29 @@ body.back
 				text-transform: uppercase
 				padding: 12px 15px 11px
 				text-decoration: none
+				position: static
+
+.ul_inner
+	position: absolute
+	top: 100%
+	z-index: 100
+	left: 0
+	max-height: 0px
+	display: block
+	overflow: hidden
+	transition: 0.5s ease-in-out
+	li
+		display: block
+		background: #333
+		width: 200px
+		&:hover
+			text-decoration: underline
+		a
+			display: block
+			padding: 12px 15px 11px
+
+.mob-hamburger
+	display: none
 
 .count
 	position: absolute
@@ -837,7 +862,48 @@ input[type="radio"]
 
 @media screen and (max-width: 950px)
 	.header
+		position: relative
+		.ul_out
+			display: none
+			position: absolute
+			top: 100%
+			width: 100%
+			z-index: 9999
+			background: #333
+			.ul_out__li
+				justify-content: flex-start
+				border: none
+				&:first-child
+					border: none
+				a
+					position: relative
+	.count
+		top: 0
+		right: 0		
+	.ul_inner
 		display: none
+	.mob-hamburger
+		height: 51px
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		padding: 0 30px
+	.mob-hamburger__line
+		width: 30px
+		height: 2px
+		background: #FFF
+		position: relative
+		display: block
+		&:before, &:after
+			content: ''
+			position: absolute
+			width: 30px
+			height: 2px
+			background: #FFF
+		&:before
+			top: -10px
+		&:after
+			bottom: -10px
 
 @media screen and (max-width: 768px)
 	.left-side__container, .center-side__container, .right-side__container

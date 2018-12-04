@@ -13,31 +13,56 @@
 	<div class="wrapper">
 		<div class="header">
 			<div class="container">
-				<ul>
-					<li><a href="#">
+				<ul class="ul_out">
+					<li class="ul_out__li"><a href="/forum/?logout=yes&PAGE_NAME=pm_folder">
 						<img src="img/exit.png" alt="exit">
 					</a></li>
-					<li><a href="#">Мои договоры</a></li>
-					<li><a href="#">Шаблоны заявлений</a></li>
-					<li>
-						<a href="#">сообщения</a>
-						<div class="count">10</div>
+					<li class="ul_out__li"><a href="/contract/">Мои договоры</a></li>
+					<li class="ul_out__li"><a href="/docs/">Шаблоны заявлений</a></li>
+					<li class="ul_out__li">
+						<a href="/forum/?PAGE_NAME=pm_folder">
+							сообщения
+							<div class="count">10</div>
+						</a>
+						
 					</li>
-					<li>
-						<a href="#">соседи</a>
-						<div class="count">2</div>
+					<li class="ul_out__li">
+						<a href="/neighbors/">
+							соседи
+							<div class="count">2</div>
+						</a>
+						
+						<ul class="ul_inner">
+							<li><a href="/neighbors/house/">Соседи по дому</a></li>
+							<li><a href="/neighbors/helpful/">Полезные соседи</a></li>
+						</ul>
 					</li>
-					<li>
-						<a href="#">форум</a>
-						<div class="count">7</div>
+					<li class="ul_out__li"> 
+						<a href="/forum/">
+							форум
+							<div class="count">7</div>
+						</a>
+						
 					</li>
-					<li><a href="#">события</a></li>
-					<li>
-						<a href="#">акции</a>
-						<div class="count">50</div>
+					<li class="ul_out__li"><a href="/events/">события</a></li>
+					<li class="ul_out__li">
+						<a href="/action/">
+							акции
+							<div class="count">50</div>
+						</a>
+						
 					</li>
-					<li><a href="#">связь с квс</a></li>
+					<li class="ul_out__li">
+						<a href="/connect_dev/">связь с квс</a>
+						<ul class="ul_inner">
+							<li><a href="/connect_dev/review/">Оставить отзыв</a></li>
+							<li><a href="/connect_dev/qa/">Пройти опрос</a></li>
+						</ul>
+					</li>
 				</ul>
+				<div class="mob-hamburger">
+					<span class="mob-hamburger__line"></span>
+				</div>
 			</div>
 		</div>
 		<div class="container">

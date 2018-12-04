@@ -47,5 +47,8 @@ $(document).ready(function() {
 	$(document).on('click', '.add-family-btn', function(){
 		familyWrapper.clone().hide().appendTo($('.third-screen')).show();
 	});
+	$(document).on('click', '.mob-hamburger', function(){
+		$('.ul_out').slideToggle(400);
+	});
 });
 

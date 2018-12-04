@@ -217,7 +217,7 @@ body.back {
   .header .container {
     background: transparent;
     padding: 0px; }
-  .header ul {
+  .header .ul_out {
     margin-bottom: 0px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -227,7 +227,7 @@ body.back {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch; }
-    .header ul li {
+    .header .ul_out .ul_out__li {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -242,7 +242,7 @@ body.back {
               justify-content: center;
       border-right: 1px solid #FFF;
       position: relative; }
-      .header ul li:before {
+      .header .ul_out .ul_out__li:before {
         content: '';
         position: absolute;
         height: 0px;
@@ -253,18 +253,45 @@ body.back {
         -webkit-transition: 0.3s ease-in-out;
         -o-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out; }
-      .header ul li:first-child {
+      .header .ul_out .ul_out__li:first-child {
         border-left: 1px solid #FFF; }
-      .header ul li:hover:before {
+      .header .ul_out .ul_out__li:hover:before {
         height: 3px; }
-      .header ul li a {
+      .header .ul_out .ul_out__li:hover .ul_inner {
+        max-height: 400px; }
+      .header .ul_out .ul_out__li a {
         text-transform: uppercase;
         display: block;
         color: #fff;
         font: 14px "Myriad pro", sans-serif;
         text-transform: uppercase;
         padding: 12px 15px 11px;
-        text-decoration: none; }
+        text-decoration: none;
+        position: static; }
+
+.ul_inner {
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  left: 0;
+  max-height: 0px;
+  display: block;
+  overflow: hidden;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out; }
+  .ul_inner li {
+    display: block;
+    background: #333;
+    width: 200px; }
+    .ul_inner li:hover {
+      text-decoration: underline; }
+    .ul_inner li a {
+      display: block;
+      padding: 12px 15px 11px; }
+
+.mob-hamburger {
+  display: none; }
 
 .count {
   position: absolute;
@@ -1062,7 +1089,60 @@ input[type="radio"] {
 
 @media screen and (max-width: 950px) {
   .header {
-    display: none; } }
+    position: relative; }
+    .header .ul_out {
+      display: none;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      z-index: 9999;
+      background: #333; }
+      .header .ul_out .ul_out__li {
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        border: none; }
+        .header .ul_out .ul_out__li:first-child {
+          border: none; }
+        .header .ul_out .ul_out__li a {
+          position: relative; }
+  .count {
+    top: 0;
+    right: 0; }
+  .ul_inner {
+    display: none; }
+  .mob-hamburger {
+    height: 51px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0 30px; }
+  .mob-hamburger__line {
+    width: 30px;
+    height: 2px;
+    background: #FFF;
+    position: relative;
+    display: block; }
+    .mob-hamburger__line:before, .mob-hamburger__line:after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background: #FFF; }
+    .mob-hamburger__line:before {
+      top: -10px; }
+    .mob-hamburger__line:after {
+      bottom: -10px; } }
 
 @media screen and (max-width: 768px) {
   .left-side__container, .center-side__container, .right-side__container {
