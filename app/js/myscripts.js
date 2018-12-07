@@ -59,5 +59,49 @@ $(document).ready(function() {
 		});
 	};
 	searchBtn();
+
+	$(document).on('click', '.btn-edit-trigger-family', function(){
+		 $('.family-block-wrapper').hide();
+		 $('.family-block-edit').addClass('active');
+	})
+	$(document).on('click', '.btn-edit-trigger-personal', function(e){
+		 e.preventDefault();
+		 $('.personal-block').hide();
+		 $('.personal-block-edit').addClass('active');
+	})
+	$(document).on('click', '.btn-edit-trigger-service', function(){
+		 $('.service-block').hide();
+		 $('.service-block-edit').addClass('active');
+	})
+	$(document).on('click', '.family-block-edit.active input[type="submit"]:not(.add-family-btn)', function(e){
+		e.preventDefault();
+		$('.family-block-wrapper').show();
+		$('.family-block-edit').removeClass('active');
+	})
+	$(document).on('click', '.service-block-edit.active input[type="submit"]', function(e){
+		e.preventDefault();
+		$('.service-block').show();
+		$('.service-block-edit').removeClass('active');
+	})
+	$(document).on('click', '.personal-block-edit.active input[type="submit"]', function(e){
+		e.preventDefault();
+		$('.personal-block').show();
+		$('.personal-block-edit').removeClass('active');
+	})
+	$(document).on('click', '.add-family-btn', function(e){
+		e.preventDefault();
+		console.log(1);
+		let a = $('.family-block__member').eq(0).clone();
+		console.log(a);
+		$('.family-block__wrapper-member').prepend(a);
+		$('.personal-block-edit').removeClass('active');
+	})
+	$(document).on('click', '.btn-service-trigger', function(e){
+		e.preventDefault();
+		console.log(1);
+		let a = $('.service-block__fields').eq(0).clone();
+		console.log(a);
+		$('.service-block__wrapper').prepend(a);
+	})
 });
 

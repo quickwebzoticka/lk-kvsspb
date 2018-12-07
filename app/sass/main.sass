@@ -141,6 +141,20 @@ body
 		top: 48%
 		right: -20%
 
+.service-block-edit, .family-block-edit, .personal-block-edit
+	display: none
+
+.service-block-edit.active, .family-block-edit.active, .personal-block-edit.active
+	display: block
+
+.family-block-edit
+	.left-side__container
+		margin-bottom: 0px
+
+.service-block-edit
+	.left-side__container
+		margin-bottom: 0px
+
 .content
 	font-size: 14px
 
@@ -252,6 +266,9 @@ body.back
 	background: $backcolor
 	position: relative
 
+.left-side__container
+	margin-bottom: 80px
+
 .text-head
 	color: #000
 	font-size: 18px
@@ -265,6 +282,9 @@ body.back
 	color: #70706f
 	font-size: 16px
 	font-weight: 400
+
+.text-main_small
+	font-size: 14px
 
 .text-descr
 	color: #b2b2b2
@@ -350,6 +370,9 @@ body.back
 	.text-descr
 		width: 53%
 		margin: 0 auto 20px
+	.text-descr_wide
+		width: 100%
+
 
 .name
 	margin: 0 auto
@@ -472,6 +495,7 @@ textarea
 	width: 31px
 	border-radius: 50%
 	cursor: pointer
+	margin-left: 20px
 
 .input__checkbox
 	padding: 5px 0
