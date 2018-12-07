@@ -51,15 +51,13 @@ $(document).ready(function() {
 		$('.ul_out').slideToggle(400);
 	});
 
-	function test(func1, func2){
-
+	function searchBtn(){
+		$(document).on('click', '.search_bar__nav:not(.active)', function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			$('.search_input').val('').removeClass('active').eq($(this).index()).addClass('active');
+			return false;
+		});
 	};
-
-	function func1(){
-		console.log('Hello there!');
-	};
-	function func2(){
-		console.log()
-	}
+	searchBtn();
 });
 

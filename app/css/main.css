@@ -74,7 +74,7 @@ body {
 .background-09 {
   position: absolute; }
 
-@media screen and (max-width: 4000px) {
+@media screen and (max-width: 2559px) {
   .background-01 {
     bottom: 15%;
     left: -28%; }
@@ -1162,3 +1162,43 @@ input[type="radio"] {
 
 .right-side__container {
   padding-bottom: 30px; }
+
+.search_bar {
+  position: relative; }
+
+.search_bar__text-under {
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  left: 20px;
+  font-size: 12px; }
+
+.search_input {
+  display: none;
+  margin: 0 20px 0 0; }
+
+.search_bar__nav-bar {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.search_bar__nav {
+  margin-right: 20px;
+  font-size: 14px;
+  cursor: pointer; }
+  .search_bar__nav:last-child {
+    margin-right: 0px; }
+
+.search_input.active {
+  display: block; }
+
+.search_bar__nav.active {
+  font-weight: bold; }
