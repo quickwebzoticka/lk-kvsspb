@@ -66,7 +66,6 @@ $(document).ready(function() {
 				$(blockEdit).addClass('active');
 			})
 		});
-		// $(blockEdit).addClass('active');
 	};
 
 	function showBlock(block, blockEdit) {
@@ -74,8 +73,6 @@ $(document).ready(function() {
 			$(blockEdit).removeClass('active');
 			$(block).slideDown(700);
 		})
-		
-		
 	};
 
 	$(document).on('click', '.btn-edit-trigger-family', function(){
@@ -102,16 +99,26 @@ $(document).ready(function() {
 	})
 	$(document).on('click', '.add-family-btn', function(e){
 		e.preventDefault();
+		let btn= $(this);
 		let a = $('.family-block__member').eq(0).clone().hide();
+
+		btn.prop('disabled', true);
 		a.find('input:not([type="submit"]), textarea').val('');
 		$('.family-block__wrapper-member').prepend(a);
-		a.slideDown(700);
+		a.slideDown(700, function(){
+			btn.prop('disabled', false);
+		});
 	})
 	$(document).on('click', '.btn-service-trigger', function(e){
 		e.preventDefault();
+		let btn= $(this);
 		let a = $('.service-block__fields').eq(0).clone().hide();
+
+		btn.prop('disabled', true);
 		$('.service-block__wrapper').prepend(a);
-		a.slideDown(700);
+		a.slideDown(700, function(){
+			btn.prop('disabled', false);
+		});
 	});
 });
 

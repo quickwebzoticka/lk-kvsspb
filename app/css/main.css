@@ -198,7 +198,7 @@ body.back {
           align-items: stretch;
   width: 100%; }
 
-.family-block__member, .service-block__fields {
+.family-block__member, .service-block__fields, .personal-block-edit {
   padding-right: 5px; }
 
 @media screen and (max-width: 1024px) {
