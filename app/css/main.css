@@ -74,7 +74,7 @@ body {
 .background-09 {
   position: absolute; }
 
-@media screen and (max-width: 2559px) {
+@media screen and (min-width: 1921px) {
   .background-01 {
     bottom: 15%;
     left: -28%; }
@@ -109,31 +109,31 @@ body {
 
 @media screen and (max-width: 1920px) {
   .background-01 {
-    top: 8%;
+    top: 100px;
     left: -20%; }
   .background-02 {
-    top: 18%;
+    top: 200px;
     left: -20%; }
   .background-03 {
-    top: 48%;
+    top: 800px;
     left: -20%; }
   .background-09 {
-    top: 32%;
+    top: 400px;
     left: -20%; }
   .background-04 {
-    top: 8%;
+    top: 100px;
     right: -20%; }
   .background-05 {
-    top: 18%;
+    top: 200px;
     right: -20%; }
   .background-06 {
-    top: 28%;
+    top: 400px;
     right: -20%; }
   .background-07 {
-    top: 38%;
+    top: 600px;
     right: -20%; }
   .background-08 {
-    top: 48%;
+    top: 800px;
     right: -20%; } }
 
 @media screen and (max-width: 1366px) {
@@ -197,6 +197,9 @@ body.back {
       -ms-flex-align: stretch;
           align-items: stretch;
   width: 100%; }
+
+.family-block__member, .service-block__fields {
+  padding-right: 5px; }
 
 @media screen and (max-width: 1024px) {
   .family-wrapper {
@@ -472,7 +475,6 @@ body.back {
   margin-bottom: 20px; }
 
 .wrapper_with-underline {
-  border-bottom: 1px solid #000;
   display: inline-block;
   position: relative;
   line-height: 10px; }
@@ -1051,8 +1053,7 @@ input[type="radio"] {
 .service {
   text-align: center;
   font-family: "Myriad pro bold", sans-serif;
-  color: #b2b2b2;
-  text-decoration: underline; }
+  color: #b2b2b2; }
 
 .btn-wrapper_center {
   -webkit-box-pack: center;
@@ -1088,7 +1089,6 @@ input[type="radio"] {
   padding-top: 50px; }
 
 .input__output_modified {
-  text-decoration: underline;
   font-family: 'Myriad pro'; }
 
 .input__output_on {
